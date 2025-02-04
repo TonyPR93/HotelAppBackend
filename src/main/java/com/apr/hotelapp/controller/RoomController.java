@@ -52,7 +52,7 @@ public class RoomController {
 		return roomService.getAllRoomTypes();
 	}
 	
-	@GetMapping("")
+	@GetMapping("/all-rooms")
 	public ResponseEntity<List<RoomResponse>> getAllRooms() throws SQLException{
 		List<Room> rooms = roomService.getAllRooms();
 		List<RoomResponse> roomResponses = new ArrayList<>();

@@ -10,7 +10,7 @@ import com.apr.hotelapp.model.BookedRoom;
 public class BookingService {
 
 	public List<BookedRoom> getAllBookingsByRoomId(Long roomId) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
