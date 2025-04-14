@@ -14,4 +14,9 @@ public class BookingService {
 		return null;
 	}
 
+	public static List<BookedRoom> getAllBookings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
