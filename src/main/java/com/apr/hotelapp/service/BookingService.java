@@ -37,7 +37,7 @@ public class BookingService implements IBookingService {
 		}else{
 			throw new InvalidBookingRequestException("sorry this room has been booked for the selected dates");
 		}
-		return null;
+		return bookingRequest.getBookingConfirmationCode();
 	}
 
 
