@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.apr.hotelapp.exception.InvalidBookingRequestException;
+import com.apr.hotelapp.exception.ResourceNotFoundException;
 import com.apr.hotelapp.model.BookedRoom;
 import com.apr.hotelapp.model.Room;
 import com.apr.hotelapp.repository.BookingRepository;
@@ -44,7 +45,7 @@ public class BookingService implements IBookingService {
 
 	@Override
 	public BookedRoom findByBookingConfirmationCode(String confirmationCode) {
-		return bookingRepository.findByBookingConfirmationCode(confirmationCode);
+		return bookingRepository.findByBookingConfirmationCode(confirmationCode).orElseThrow(() -> new ResourceNotFoundException("No bookings found with booking code :" + confirmationCode));
 	}
 
 	@Override
