@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.apr.hotelapp.exception.UserAlreadyExistsException;
 import com.apr.hotelapp.model.Role;
@@ -16,6 +17,7 @@ import com.apr.hotelapp.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
+@Service
 @RequiredArgsConstructor
 public class UserService implements IUserService{
 
